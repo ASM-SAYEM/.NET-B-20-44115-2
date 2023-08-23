@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerraceGardenManagement", "TerraceGardenManagement\TerraceGardenManagement.csproj", "{52E73341-BF57-4E22-BF09-7BF0E8FAFDD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C31B1F7F-F2AF-417F-BD8A-E61661C187F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{22DE5330-C908-47DA-8B5E-575172D374ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52E73341-BF57-4E22-BF09-7BF0E8FAFDD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E73341-BF57-4E22-BF09-7BF0E8FAFDD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E73341-BF57-4E22-BF09-7BF0E8FAFDD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E73341-BF57-4E22-BF09-7BF0E8FAFDD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31B1F7F-F2AF-417F-BD8A-E61661C187F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31B1F7F-F2AF-417F-BD8A-E61661C187F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31B1F7F-F2AF-417F-BD8A-E61661C187F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31B1F7F-F2AF-417F-BD8A-E61661C187F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DE5330-C908-47DA-8B5E-575172D374ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DE5330-C908-47DA-8B5E-575172D374ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DE5330-C908-47DA-8B5E-575172D374ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DE5330-C908-47DA-8B5E-575172D374ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4CAAB89-7CFC-46DA-9960-39222E34F748}
+	EndGlobalSection
+EndGlobal

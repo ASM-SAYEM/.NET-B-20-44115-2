@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Web.Http;
 using TerraceGardenManagement.AuthFilters;
+using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
 {
@@ -119,7 +121,73 @@ namespace TerraceGardenManagement.Controllers
             }
         }
 
+      //  [11:34 PM] RIDOWAN UL ALAM
 
+
+
+        [HttpGet]
+
+        [Route("api/Admin/reset/{gmail}")]
+
+        public HttpResponseMessage ResetPass(string gmail)
+
+        {
+
+            try
+
+            {
+
+                var data = AuthService.ResetPass(gmail);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+
+
+            }
+
+        }
+
+
+
+
+
+        [HttpPost]
+
+        [Route("api/Admin/set/{UserName}")]
+
+        public HttpResponseMessage SetPassword(string UserName, SetPassModel spm)
+
+        {
+
+            try
+
+            {
+
+                var data = AuthService.SetPassword(UserName, spm.Otp, spm.Password);
+
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+
+        }
 
 
     }

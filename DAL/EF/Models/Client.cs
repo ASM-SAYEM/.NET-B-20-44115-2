@@ -18,5 +18,11 @@ namespace DAL.EF.Models
         public string Name { get; set; }
         [Required]
         public string Type { get; set; }
+
+        //
+        [Required]
+        public string Phone { get; set; }
+        [Required]
+        public string Gmail { get; set; }
     }
 }

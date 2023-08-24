@@ -16,7 +16,7 @@ namespace DAL
             return new ClientRepo();
         }
 
-        public static IRepo<Admin, string, Admin> AdminData()
+        public static IRepo4<Admin, string, Admin> AdminData()
         {
             return new AdminRepo();
         }
@@ -56,7 +56,7 @@ namespace DAL
             return new NotificationRepo();
         }
 
-        public static IRepo<Token, int, Token> TokensData()
+        public static IRepo<Token, string, Token> TokensData()
         {
             return new TokenRepo();
         }
@@ -64,6 +64,16 @@ namespace DAL
         public static IAuth AuthData()
         {
             return new AdminRepo();
+        }
+
+        //public static IRepo3<OTPreset,int,bool> OTPresetData()
+        //{
+        //    return new OTPresetRepo();
+        //}
+
+        public static IRepo3<OTPreset, string, bool> OTPresetData()
+        {
+            return new OTPresetRepo();
         }
 
     }

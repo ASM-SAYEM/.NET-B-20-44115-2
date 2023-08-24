@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TerraceGardenManagement.AuthFilters;
 using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
@@ -22,9 +23,28 @@ namespace TerraceGardenManagement.Controllers
             }
             else
             {
-                return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "User not found" });
+                return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Admin not found" });
             }
 
+
+        }
+
+
+        [Logged]
+        [HttpGet]
+        [Route("api/logout")]
+        public HttpResponseMessage Logout()
+        {
+            var token = Request.Headers.Authorization.ToString();
+            try
+            {
+                var res = AuthService.Logout(token);
+                return Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Msg = ex.Message });
+            }
 
         }
     }

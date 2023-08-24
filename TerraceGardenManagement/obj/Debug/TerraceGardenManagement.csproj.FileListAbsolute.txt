@@ -110,3 +110,5 @@ C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\S
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\System.Text.Encodings.Web.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\AutoMapper.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\BCrypt.Net-Next.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\BCrypt.Net-Next.xml

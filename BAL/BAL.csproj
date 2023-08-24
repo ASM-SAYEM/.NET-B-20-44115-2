@@ -101,6 +101,7 @@
     <Compile Include="DTOs\FeedbackDTO.cs" />
     <Compile Include="DTOs\NotificationDTO.cs" />
     <Compile Include="DTOs\OfferDTO.cs" />
+    <Compile Include="DTOs\OTPresetDTO.cs" />
     <Compile Include="DTOs\ServiceProviderDTO.cs" />
     <Compile Include="DTOs\ServiceProviderPaymentDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Services\FeedbackService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\OfferService.cs" />
+    <Compile Include="Services\OTPresetService.cs" />
     <Compile Include="Services\ServiceProviderPaymentService.cs" />
     <Compile Include="Services\ServiceProviderService.cs" />
     <Compile Include="Services\WebsiteService.cs" />

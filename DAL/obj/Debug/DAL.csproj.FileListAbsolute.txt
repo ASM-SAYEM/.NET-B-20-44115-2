@@ -73,3 +73,14 @@ C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.NotificationTB.resources
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.AdminTokenTB.resources
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\BCrypt.Net-Next.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Buffers.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Memory.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Numerics.Vectors.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\BCrypt.Net-Next.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Buffers.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Memory.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Numerics.Vectors.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.OTP_TB.resources

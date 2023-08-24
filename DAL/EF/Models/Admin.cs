@@ -26,5 +26,10 @@ namespace DAL.EF.Models
         //{
         //    SentNotifications = new List<Notification>();
         //}
+
+        [Required]
+        public string Phone { get; set; }
+        [Required]
+        public string Gmail { get; set; }
     }
 }

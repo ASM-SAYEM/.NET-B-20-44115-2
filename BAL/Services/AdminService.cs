@@ -2,6 +2,7 @@
 using BAL.DTOs;
 using DAL;
 using DAL.EF.Models;
+using DAL.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Web;
 
 namespace BAL.Services
 {
-    public class AdminService
+    public class AdminService 
     {
         public static List<AdminDTO> Get()
         {
@@ -26,7 +27,7 @@ namespace BAL.Services
 
         public static AdminDTO Get(string UserName)
         {
-            var data = DataAccessFactory.ClientData().Get(UserName);
+            var data = DataAccessFactory.AdminData().Get(UserName);
 
             var cfg = new MapperConfiguration(c =>
             {
@@ -72,9 +73,9 @@ namespace BAL.Services
 
         }
 
-        public static bool Delete(string UserName)
+        public static bool Delete(string id)
         {
-            var data = DataAccessFactory.AdminData().Delete(UserName);
+            var data = DataAccessFactory.AdminData().Delete(id);
 
             return data;
 
@@ -107,5 +108,13 @@ namespace BAL.Services
             return mappedNotification;
         }
 
+
+        public static bool ChangePass(string UserName, string password, string newPassword)
+        {
+            var res = DataAccessFactory.AdminData().ChangePass(UserName, password, newPassword);
+            return res;
+        }
+
+       
     }
 }

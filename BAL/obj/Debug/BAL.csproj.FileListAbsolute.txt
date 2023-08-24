@@ -74,3 +74,13 @@ C:\Users\USER\source\repos\TerraceGardenManagement\BAL\obj\Debug\BAL.dll
 C:\Users\USER\source\repos\TerraceGardenManagement\BAL\obj\Debug\BAL.pdb
 C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\EntityFramework.SqlServer.dll
 C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\EntityFramework.SqlServer.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\BCrypt.Net-Next.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Memory.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Numerics.Vectors.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Buffers.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\BCrypt.Net-Next.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Memory.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Numerics.Vectors.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\BAL\bin\System.Buffers.xml

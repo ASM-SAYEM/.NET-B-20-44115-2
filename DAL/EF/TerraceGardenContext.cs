@@ -20,5 +20,6 @@ namespace DAL.EF
         public DbSet<Discount> Discounts { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Token> Tokens { get; set; }
+        public DbSet<OTPreset> OTPresets { get; set; }
     }
 }

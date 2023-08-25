@@ -19,14 +19,7 @@ namespace DAL.EF.Models
         [Required]
         public string Type { get; set; }
 
-        //
-        //public virtual ICollection<Notification> SentNotifications { get; set; }
-
-        //public Admin()
-        //{
-        //    SentNotifications = new List<Notification>();
-        //}
-
+        
         [Required]
         public string Phone { get; set; }
         [Required]

@@ -63,7 +63,23 @@ namespace TerraceGardenManagement.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+        //
 
+        [HttpPost]
+        [Route("api/ServiceProviderPayment/addWithNotification")]
+        public HttpResponseMessage AddPaymentTo(ServiceProviderPaymentDTO sp)
+        {
+            try
+            {
+                var res = ServiceProviderPaymentService.AddPaymentTo(sp);
+                return Request.CreateResponse(HttpStatusCode.OK, res);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+        //
 
 
         [HttpPost]
@@ -103,19 +119,19 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-        [HttpPost]
-        [Route("api/ServiceProviderPayment/AddPayment")]
-        public HttpResponseMessage AddPaymentTo(ServiceProviderPaymentDTO payment)
-        {
-            try
-            {
-                var res = ServiceProviderPaymentService.AddPaymentTo(payment);
-                return Request.CreateResponse(HttpStatusCode.OK, res);
-            }
-            catch (Exception ex)
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-        }
+        //[HttpPost]
+        //[Route("api/ServiceProviderPayment/AddPayment")]
+        //public HttpResponseMessage AddPaymentTo(ServiceProviderPaymentDTO payment)
+        //{
+        //    try
+        //    {
+        //        var res = ServiceProviderPaymentService.AddPaymentTo(payment);
+        //        return Request.CreateResponse(HttpStatusCode.OK, res);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+        //    }
+        //}
     }
 }

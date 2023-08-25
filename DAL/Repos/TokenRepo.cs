@@ -29,6 +29,7 @@ namespace DAL.Repos
         public Token Get(string id)
         {
             return db.Tokens.FirstOrDefault(t => t.TokenKey.Equals(id));
+            //return db.Tokens.FirstOrDefault(t => t.TKey.Equals(id));
         }
 
         public Token Update(Token obj)

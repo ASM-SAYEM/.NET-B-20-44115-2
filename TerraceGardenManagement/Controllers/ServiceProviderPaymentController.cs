@@ -123,7 +123,7 @@ namespace TerraceGardenManagement.Controllers
         //[Route("api/ServiceProviderPayment/AddPayment")]
         //public HttpResponseMessage AddPaymentTo(ServiceProviderPaymentDTO payment)
         //{
-        //    try
+        //    try 
         //    {
         //        var res = ServiceProviderPaymentService.AddPaymentTo(payment);
         //        return Request.CreateResponse(HttpStatusCode.OK, res);

@@ -52,7 +52,7 @@ namespace BAL.Services
 
         public static NotificationDTO Get(int id)
         {
-            var data = DataAccessFactory.NotificationData().Get();
+            var data = DataAccessFactory.NotificationData().Get(id);
 
             var cfg = new MapperConfiguration(c => {
                 //c.CreateMap<FeedbackDTO, Feedback>();

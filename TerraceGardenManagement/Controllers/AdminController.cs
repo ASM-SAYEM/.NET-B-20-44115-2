@@ -12,6 +12,7 @@ using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
 {
+  
     public class AdminController : ApiController
     {
         [Logged]
@@ -31,6 +32,7 @@ namespace TerraceGardenManagement.Controllers
             }
         }
 
+        [Logged]
         [HttpGet]
         [Route("api/Admin/UserName/{UserName}")]
         public HttpResponseMessage GetM(string UserName)
@@ -51,7 +53,7 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-
+        [Logged]
         [HttpPost]
         [Route("api/Admin/add")]
         public HttpResponseMessage AddMembers(AdminDTO sp)
@@ -68,7 +70,7 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-
+        [Logged]
         [HttpPost]
         [Route("api/Admin/update")]
         public HttpResponseMessage Update(AdminDTO sp)
@@ -86,7 +88,7 @@ namespace TerraceGardenManagement.Controllers
 
 
 
-
+        [Logged]
         [HttpDelete]
         [Route("api/Admin/delete/{uname}")]
         public HttpResponseMessage DeleteAdmin(string uname)
@@ -121,7 +123,22 @@ namespace TerraceGardenManagement.Controllers
             }
         }
 
-      //  [11:34 PM] RIDOWAN UL ALAM
+        [Logged]
+        [HttpGet]
+        [Route("api/Notifiaction/All")]
+        public HttpResponseMessage GetNotification()
+        {
+            try
+            {
+                var data = NotificationService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+
+            }
+        }
 
 
 

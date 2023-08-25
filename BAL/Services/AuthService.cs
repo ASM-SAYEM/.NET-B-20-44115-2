@@ -38,11 +38,13 @@ namespace BAL.Services
         }
         public static bool IsTokenValid(string token)
         {
-            var tk = (from t in DataAccessFactory.TokensData().Get()
-                      where t.TokenKey.Equals(token)
-                      && t.ExpiredAt == null
-                      select t).SingleOrDefault();
-            if (tk != null)
+            var r = DataAccessFactory.TokensData().Get(token);
+            //var tk = (from t in DataAccessFactory.TokensData().Get()
+            //          where t.TokenKey.Equals(token)
+            //          && t.ExpiredAt == null
+            //          select t).SingleOrDefault();
+
+            if (r != null)
             {
                 return true;
             }
@@ -75,7 +77,7 @@ namespace BAL.Services
             return false;
         }
 
-
+       
 
 
         public static OTPresetDTO ResetPass(string gmail)
@@ -103,9 +105,10 @@ namespace BAL.Services
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.UseDefaultCredentials = false;
                     client.EnableSsl = true;
-                    client.Credentials = new NetworkCredential("hw733029@gmail.com", "tiasqnrurjbohfor");
+                   // client.UseDefaultCredentials = true;
+                    client.Credentials = new NetworkCredential("securesally@gmail.com", "ppeawvoehzefcqbc");
                     using (var message = new MailMessage(
-                        from: new MailAddress("hw733029@gmail.com", "Hello World"),
+                        from: new MailAddress("securesally@gmail.com", "Hello World"),
                         to: new MailAddress(res.Gmail, res.Name)
                         ))
                     {

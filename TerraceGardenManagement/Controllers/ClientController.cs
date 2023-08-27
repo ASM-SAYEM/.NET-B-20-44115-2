@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TerraceGardenManagement.AuthFilters;
 
 namespace TerraceGardenManagement.Controllers
 {
     public class ClientController : ApiController
     {
+        [AdminAccess]
         [HttpGet]
         [Route("api/Client/All")]
         public HttpResponseMessage Get()
@@ -26,7 +28,7 @@ namespace TerraceGardenManagement.Controllers
 
             }
         }
-
+        [AdminAccess]
         [HttpGet]
         [Route("api/Client/name/{name}")]
         public HttpResponseMessage GetClient(string name)
@@ -47,7 +49,7 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-
+        [AdminAccess]
         [HttpPost]
         [Route("api/Client/add")]
         public HttpResponseMessage AddClients(ClientDTO sp)

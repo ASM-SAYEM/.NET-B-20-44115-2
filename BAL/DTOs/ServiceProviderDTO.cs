@@ -19,6 +19,8 @@ namespace BAL.DTOs
         [Required]
         public DateTime Date { get; set; }
 
+        public string Gmail { get; set; }
+
         public string AssignedBy { get; set; }
 
         public string FeedbackBy { get; set; }

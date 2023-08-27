@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TerraceGardenManagement.AuthFilters;
 
 namespace TerraceGardenManagement.Controllers
 {
@@ -47,7 +48,7 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-
+        [AdminAccess]
         [HttpPost]
         [Route("api/Offer/add")]
         public HttpResponseMessage AddOffers(OfferDTO offer)
@@ -64,7 +65,7 @@ namespace TerraceGardenManagement.Controllers
         }
 
 
-
+        [AdminAccess]
         [HttpPost]
         [Route("api/Offer/update")]
         public HttpResponseMessage UpdateOffer(OfferDTO os)
@@ -82,7 +83,7 @@ namespace TerraceGardenManagement.Controllers
 
 
 
-
+        [AdminAccess]
         [HttpDelete]
         [Route("api/OfferService/delete/{id:int}")]
         public HttpResponseMessage DeleteOffer(int id)

@@ -84,3 +84,16 @@ C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Memory.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Numerics.Vectors.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.OTP_TB.resources
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Memory.Data.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Text.Encodings.Web.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Text.Json.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.ValueTuple.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Memory.Data.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Text.Encodings.Web.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Text.Json.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\bin\System.ValueTuple.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\DAL\obj\Debug\DAL.Migrations.GmailAddedToServiceProvider.resources

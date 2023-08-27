@@ -6,6 +6,8 @@ using DAL.EF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Web;
 
 namespace BAL.Services
@@ -24,6 +26,32 @@ namespace BAL.Services
             };
 
             var addedNotification = DataAccessFactory.NotificationData().Add(notification);
+            //email
+            var data = DataAccessFactory.ClientData().Get(serviceProviderName);
+            var client = new SmtpClient();
+
+            client.Host = "smtp.mail.yahoo.com";//"smtp.yahoo.com";
+            client.Port = 587;//465;//587;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.EnableSsl = true;
+            // client.UseDefaultCredentials = true;
+            client.Credentials = new NetworkCredential("asmsayem72@yahoo.com", "bypclvhnfsatqtzz");
+            using (var message1 = new MailMessage(
+                from: new MailAddress("asmsayem72@yahoo.com", "TerraceGardenManagement"),
+                to: new MailAddress(data.Gmail, data.Name)
+                ))
+            {
+
+                message1.Subject = "TerraceGarden";
+                message1.Body = notification.Message;
+
+                client.Send(message1);
+            }
+
+
+
+
 
             var cfg = new MapperConfiguration(c =>
             {

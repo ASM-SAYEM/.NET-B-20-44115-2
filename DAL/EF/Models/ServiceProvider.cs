@@ -19,6 +19,8 @@ namespace DAL.EF.Models
         [Required]
         public DateTime Date { get; set; }
 
+        public string Gmail { get; set; }
+
         [ForeignKey("Admin")]
         public string AssignedBy { get; set; }
 

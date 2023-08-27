@@ -6,11 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TerraceGardenManagement.AuthFilters;
 
 namespace TerraceGardenManagement.Controllers
 {
+    [AdminAccess]
     public class ServiceProviderController : ApiController
     {
+        [AdminAccess]
         [HttpGet]
         [Route("api/ServiceProvider/all")]
         public HttpResponseMessage Get()
@@ -27,6 +30,7 @@ namespace TerraceGardenManagement.Controllers
             }
         }
 
+        [AdminAccess]
         [HttpGet]
         [Route("api/ServiceProvider/{id:int}")]
         public HttpResponseMessage GetServiceProvider(int id)
@@ -46,7 +50,7 @@ namespace TerraceGardenManagement.Controllers
             }
         }
 
-
+        [AdminAccess]
         [HttpPost]
         [Route("api/ServiceProvider/add")]
         public HttpResponseMessage AddServiceProvider(ServiceProviderDTO serviceProvider)
@@ -81,7 +85,7 @@ namespace TerraceGardenManagement.Controllers
 
 
 
-
+        [AdminAccess]
         [HttpDelete]
         [Route("api/ServiceProvider/delete/{id:int}")]
         public HttpResponseMessage DeleteServiceProvider(int id)

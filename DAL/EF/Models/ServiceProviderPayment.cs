@@ -20,5 +20,7 @@ namespace DAL.EF.Models
         public int Amount { get; set; }
 
         public DateTime PaymentDate { get; set; }
+
+        //public string Gmail { get; set; }
     }
 }

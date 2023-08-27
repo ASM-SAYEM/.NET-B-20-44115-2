@@ -97,30 +97,26 @@ namespace BAL.Services
                 {
                     var retotp = DataAccessFactory.OTPresetData().Get(otp.OTP);
 
-                    //Sending Otp to the user
                     var client = new SmtpClient();
 
-                    client.Host = "smtp.gmail.com";
-                    client.Port = 587;
+                    client.Host = "smtp.mail.yahoo.com";
+                    client.Port = 587;//465;//587;
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.UseDefaultCredentials = false;
                     client.EnableSsl = true;
                    // client.UseDefaultCredentials = true;
-                    client.Credentials = new NetworkCredential("securesally@gmail.com", "ppeawvoehzefcqbc");
+                    client.Credentials = new NetworkCredential("asmsayem72@yahoo.com", "bypclvhnfsatqtzz");
                     using (var message = new MailMessage(
-                        from: new MailAddress("securesally@gmail.com", "Hello World"),
+                        from: new MailAddress("asmsayem72@yahoo.com", "TerraceGardenManagement"),
                         to: new MailAddress(res.Gmail, res.Name)
                         ))
                     {
 
-                        message.Subject = "Reset Your Password";
-                        message.Body = "Your OTP: " + retotp.OTP + ". Don't share it with anyone. Thank You!";
+                        message.Subject = "terracegarden-Reset Your Password";
+                        message.Body = "Your OTP: " + retotp.OTP +".If this is not you,Change your password to secure your account. Don not share it with anyone. Thank You....";
 
                         client.Send(message);
                     }
-
-                    ///
-
 
                     var cfg = new MapperConfiguration(c =>
                     {

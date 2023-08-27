@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DAL.Migrations;
+using System.Net.Mail;
+using System.Net;
 
 namespace BAL.Services
 {
@@ -79,7 +82,7 @@ namespace BAL.Services
 
 
         //////////////////////////////
-        public static ServiceProviderPaymentDTO AddPaymentTo(ServiceProviderPaymentDTO payment)
+        public static ServiceProviderPayment AddPaymentTo(ServiceProviderPaymentDTO payment)
         {
             var cfg = new MapperConfiguration(c =>
             {
@@ -92,11 +95,34 @@ namespace BAL.Services
 
             // Send notifications to the associated service provider
             var serviceProvider = ServiceProviderService.Get(addedPayment.ServiceProviderId); // Assuming you have a ServiceProviderService
-            var notificationMessage = $"Payment of {payment.Amount} added on {payment.PaymentDate}";
-            NotificationService.SendNotification(serviceProvider.Name, notificationMessage, "Admin"); // Use appropriate admin username
+            //var notificationMessage = $"Payment of {payment.Amount} added on {payment.PaymentDate}";
+           // NotificationService.SendNotification(serviceProvider.Name, notificationMessage, "Admin"); // Use appropriate admin username
+                                                                                                      //Eail
+            //var data = DataAccessFactory.ClientData().Get();
+            var client = new SmtpClient();
 
-            var resultDTO = mapper.Map<ServiceProviderPaymentDTO>(addedPayment);
-            return resultDTO;
+            client.Host = "smtp.mail.yahoo.com";//"smtp.yahoo.com";
+            client.Port = 587;//465;//587;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.EnableSsl = true;
+            // client.UseDefaultCredentials = true;
+            client.Credentials = new NetworkCredential("asmsayem72@yahoo.com", "bypclvhnfsatqtzz");
+            using (var message1 = new MailMessage(
+                from: new MailAddress("asmsayem72@yahoo.com", "TerraceGardenManagement"),
+                to: new MailAddress(serviceProvider.Gmail, serviceProvider.Name)
+                ))
+            {
+
+                message1.Subject = "TerraceGarden";
+                message1.Body = "Payment Done . Please check your account. Thank you.";
+
+                client.Send(message1);
+            }
+
+
+            //var resultDTO = mapper.Map<ServiceProviderPaymentDTO>(addedPayment);
+            return addedPayment;
         }
     }
 }

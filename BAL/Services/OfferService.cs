@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Net.Mail;
+using System.Net;
 
 namespace BAL.Services
 {
@@ -58,11 +60,33 @@ namespace BAL.Services
             //var mapper1 = new Mapper(cfg);
             //var mapped1 = mapper.Map<List<ClientDTO>>(data1);
             //return mapped; // Assuming you have a ClientService
-            foreach (var client in data1)
+            foreach (var client1 in data1)
             {
-                var notificationMessage = $"New offer uploaded: {data.offerName}";
-                NotificationService.SendNotification(client.Name, notificationMessage, data.Assignby);
+                //var notificationMessage = $"New offer uploaded: {data.offerName}";
+                //NotificationService.SendNotification(client.Name, notificationMessage, data.Assignby);
+                var client = new SmtpClient();
+
+                client.Host = "smtp.mail.yahoo.com";//"smtp.yahoo.com";
+                client.Port = 587;//465;//587;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.EnableSsl = true;
+                // client.UseDefaultCredentials = true;
+                client.Credentials = new NetworkCredential("asmsayem72@yahoo.com", "bypclvhnfsatqtzz");
+                using (var message = new MailMessage(
+                    from: new MailAddress("asmsayem72@yahoo.com", "TerraceGardenManagement"),
+                    to: new MailAddress(client1.Gmail, client1.Name)
+                    ))
+                {
+
+                    message.Subject = "Reset Your Password";
+                    message.Body =  ".New offer. Thank You!";
+
+                    client.Send(message);
+                }
             }
+
+           
 
 
             return data;

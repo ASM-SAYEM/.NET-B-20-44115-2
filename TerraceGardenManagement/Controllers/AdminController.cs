@@ -12,9 +12,10 @@ using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
 {
-  
+    [AdminAccess]
     public class AdminController : ApiController
     {
+        
         [Logged]
         [HttpGet]
         [Route("api/Admin/All")]
@@ -163,12 +164,7 @@ namespace TerraceGardenManagement.Controllers
             catch (Exception ex)
 
             {
-
-
-
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
-
-
 
             }
 

@@ -7,12 +7,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TerraceGardenManagement.AuthFilters;
 
 namespace TerraceGardenManagement.Controllers
 {
+
+    [EnableCors("*")]
+    [AdminAccess]
     public class DiscountController : ApiController
     {
-        [EnableCors("*")]
 
         [HttpGet]
         [Route("api/Discount/All")]

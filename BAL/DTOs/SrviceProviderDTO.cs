@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class ClientDTO
+    public class SrviceProviderDTO
     {
         [Key]
         public int Id { get; set; }
@@ -17,7 +17,7 @@ namespace BLL.DTOs
         [MinLength(8)]
         public string Password { get; set; }
         [Required]
-        public int PhoneNumber { get; set; }
-
+        public int ContactNo { get; set; }
+        public DateTime JoiningDate { get; set; }
     }
 }

@@ -2,16 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class Repo
+    internal class Repo
     {
-        protected TerraceGardenContext db;
-        internal Repo()
+        protected ManagerContext db;
+        protected Repo()
         {
-            db = new TerraceGardenContext();
+            db = new ManagerContext();
         }
     }
 }

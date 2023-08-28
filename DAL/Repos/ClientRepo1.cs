@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class TokenRepo : Repo, IRepo<Token, int, bool>, IRepo2<Token,String,Token>
+    internal class ClientRepo : Repo, IRepo<Client, int, bool>
     {
-        public bool Create(Token obj)
+        public bool Create(Client obj)
         {
             throw new NotImplementedException();
         }
@@ -20,33 +20,25 @@ namespace DAL.Repos
             throw new NotImplementedException();
         }
 
-        public List<Token> Get()
-        {
-
-            return db.Tokens.ToList();
-        }
-
-        public Token Get(int id)
+        public List<Client> Get()
         {
             throw new NotImplementedException();
         }
 
-
-        public List<Token> GetDate(DateTime date)
+        public Client Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Token GetToken(string id)
-        {
-            return db.Tokens.FirstOrDefault(v => v.TokenKey.Equals(id));
-        }
-
-        public bool Update(Token obj)
+        public List<Client> GetDate(DateTime date)
         {
             throw new NotImplementedException();
         }
 
-      
+        public bool Update(Client obj)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

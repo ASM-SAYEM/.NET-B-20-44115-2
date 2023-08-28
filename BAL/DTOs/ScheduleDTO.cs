@@ -1,23 +1,23 @@
-﻿using System;
+﻿using DAL.EF.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class ClientDTO
+    public class ScheduleDTO
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public DateTime Appointment { get; set; }
         [Required]
-        [MinLength(8)]
-        public string Password { get; set; }
+        public int ServiceProviderId { get; set; }
         [Required]
-        public int PhoneNumber { get; set; }
-
+        public int ClientPhoneNumber { get; set; }
     }
 }

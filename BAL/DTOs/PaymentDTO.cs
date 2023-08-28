@@ -7,17 +7,13 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class ClientDTO
+    public class PaymentDTO
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public DateTime ReceiveDate { get; set; }
         [Required]
-        [MinLength(8)]
-        public string Password { get; set; }
-        [Required]
-        public int PhoneNumber { get; set; }
-
+        public int Salary { get; set; }
     }
 }

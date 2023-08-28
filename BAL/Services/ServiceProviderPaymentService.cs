@@ -94,10 +94,9 @@ namespace BAL.Services
             var addedPayment = DataAccessFactory.ServiceProviderPaymentData().Add(paymentEntity);
 
             // Send notifications to the associated service provider
-            var serviceProvider = ServiceProviderService.Get(addedPayment.ServiceProviderId); // Assuming you have a ServiceProviderService
+            var serviceProvider = ServiceProviderService.Get(addedPayment.ServiceProviderId); 
             //var notificationMessage = $"Payment of {payment.Amount} added on {payment.PaymentDate}";
-           // NotificationService.SendNotification(serviceProvider.Name, notificationMessage, "Admin"); // Use appropriate admin username
-                                                                                                      //Eail
+           // NotificationService.SendNotification(serviceProvider.Name, notificationMessage, "Admin"); 
             //var data = DataAccessFactory.ClientData().Get();
             var client = new SmtpClient();
 

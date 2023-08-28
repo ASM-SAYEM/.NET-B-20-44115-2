@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script>
+
+var app = angular.module("TerraceGardenManagement-app",[]);
+
+app.controller("offer-ctrl",function($scope,$http){
+				$http.get("https://localhost:44390/api/Offer").then(function(resp){
+					$scope.offers = resp.data;
+				},function(err){
+				
+				});
+			});
+			
+			
+			
+			
+</script>
+
+
+<body>
+
+<div ng-app="TerraceGardenManagement-app">
+  
+		
+		<div ng-controller="offer-ctrl">
+			<table border=1>
+			<tr>
+			<th>offerId</th>
+			<th>offerName</th>
+			<th>offerType</th>
+			<th>offerdescription</th>
+			<th>AssignBy</th>
+			<th>offerStarts</th>
+			<th>offerEnd</th>
+			</tr>
+			<tr ng-repeat="o in offers">
+			 <td>{{o.offerId}}</td>
+			 <td>{{o.offerName}}</td>
+			 <td>{{o.offerType}}</td>
+			 <td>{{o.offerdescription}}</td>
+			 <td>{{o.AssignBy}}</td>
+			 <td>{{o.offerStarts}}</td>
+			 <td>{{o.offerEnd}}</td>
+			</tr>
+		</div>
+		
+		
+			</form>
+			
+		</div>
+</div>
+
+</body>
+</html> 

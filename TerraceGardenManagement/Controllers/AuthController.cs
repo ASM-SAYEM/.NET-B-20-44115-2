@@ -5,11 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using TerraceGardenManagement.AuthFilters;
 using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
 {
+    [EnableCors("*","*","*")]
     public class AuthController : ApiController
     {
         [HttpPost]

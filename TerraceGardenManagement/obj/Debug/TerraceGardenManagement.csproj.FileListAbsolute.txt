@@ -112,3 +112,6 @@ C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\S
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\AutoMapper.xml
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\BCrypt.Net-Next.dll
 C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\BCrypt.Net-Next.xml
+C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\System.Web.Cors.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\System.Web.Http.Cors.dll
+C:\Users\USER\source\repos\TerraceGardenManagement\TerraceGardenManagement\bin\System.Web.Http.Cors.xml

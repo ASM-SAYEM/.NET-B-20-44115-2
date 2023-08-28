@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using TerraceGardenManagement.AuthFilters;
 
 namespace TerraceGardenManagement.Controllers
 {
+    [EnableCors("*","*","*")]
     public class ClientController : ApiController
     {
         [AdminAccess]

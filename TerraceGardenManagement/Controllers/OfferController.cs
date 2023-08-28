@@ -1,5 +1,6 @@
 ﻿using BAL.DTOs;
 using BAL.Services;
+//using Microsoft.AspNetCore.Cors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TerraceGardenManagement.AuthFilters;
+using System.Web.Http.Cors;
 
 namespace TerraceGardenManagement.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class OfferController : ApiController
     {
         [HttpGet]

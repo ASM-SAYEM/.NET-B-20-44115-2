@@ -7,11 +7,13 @@ using System.Net;
 using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using TerraceGardenManagement.AuthFilters;
 using TerraceGardenManagement.Models;
 
 namespace TerraceGardenManagement.Controllers
 {
+    [EnableCors("*", "*", "*")]
     [AdminAccess]
     public class AdminController : ApiController
     {

@@ -8,18 +8,15 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class Client
+    public class PaymentNotification
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
+        public string SenderName { get; set; }
+        [ForeignKey("Payment")]
         [Required]
-        public string Name { get; set; }
-        [Required]
-        [MinLength(8)] 
-        public string Password { get; set; }
-        [Required]
-        public int PhoneNumber { get; set; }
-       
+        public int PaymentId { get; set; }
+        public virtual Payment Payment { get; set; }
 
     }
 }

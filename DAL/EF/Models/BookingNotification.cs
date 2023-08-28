@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class Client
+    public class BookingNotification
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string Title { get; set; }
+        [ForeignKey("Booking")]
         [Required]
-        [MinLength(8)] 
-        public string Password { get; set; }
+        public int BookingIdNo { get; set; }
+        [ForeignKey("Client")]
         [Required]
-        public int PhoneNumber { get; set; }
-       
-
+        public int IdOfClient { get; set; }
+        public virtual Booking Booking { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

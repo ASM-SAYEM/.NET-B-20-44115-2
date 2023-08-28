@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class Client
+    public class Issue
     {
-        [Key]
+        [Key] 
         public int Id { get; set; }
+        [Required] 
+        public string Description { get; set; }
+        [ForeignKey("Client")]
         [Required]
-        public string Name { get; set; }
-        [Required]
-        [MinLength(8)] 
-        public string Password { get; set; }
-        [Required]
-        public int PhoneNumber { get; set; }
-       
+        public int IssueByClientId { get; set; }
+
+        public virtual Client Client { get; set; }
+
 
     }
 }

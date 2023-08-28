@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace DAL.EF.Models
 {
-    public class Client
+    public class SrviceProvider
     {
         [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
-        [MinLength(8)] 
+        [MinLength(8)]
         public string Password { get; set; }
         [Required]
-        public int PhoneNumber { get; set; }
-       
-
+        public int ContactNo { get; set; }
+        public DateTime JoiningDate { get; set; }
+      
     }
 }

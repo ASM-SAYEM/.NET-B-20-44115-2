@@ -8,21 +8,18 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Token
+    public class WishList
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        [StringLength(100)]
-        public string TKey { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; }
+        public string Description { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
+        [ForeignKey("Product")]
+        public int ProductId { get; set; }
 
-        [Required]
         [ForeignKey("User")]
-        public string UserId { get; set; }
+        public string WishBy { get; set; }
+        public virtual Product Product { get; set; }
         public virtual User User { get; set; }
     }
 }

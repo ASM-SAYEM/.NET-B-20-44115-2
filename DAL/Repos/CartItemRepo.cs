@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class DiscountRepo : Repo, IRepo<Discount, int, Discount>
+    internal class CartItemRepo : Repo, IRepo<CartItem, int, CartItem>
     {
-        public Discount Create(Discount obj)
+        public CartItem Create(CartItem obj)
         {
-            db.Discounts.Add(obj);
+            db.CartItems.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
@@ -20,21 +20,21 @@ namespace DAL.Repos
         public bool Delete(int id)
         {
             var ex = Read(id);
-            db.Discounts.Remove(ex);
+            db.CartItems.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<Discount> Read()
+        public List<CartItem> Read()
         {
-            return db.Discounts.ToList();
+            return db.CartItems.ToList();
         }
 
-        public Discount Read(int id)
+        public CartItem Read(int id)
         {
-            return db.Discounts.Find(id);
+            return db.CartItems.Find(id);
         }
 
-        public Discount Update(Discount obj)
+        public CartItem Update(CartItem obj)
         {
             var ex = Read(obj.Id);
             db.Entry(ex).CurrentValues.SetValues(obj);

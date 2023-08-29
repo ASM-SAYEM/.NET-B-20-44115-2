@@ -8,35 +8,35 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class DiscountRepo : Repo, IRepo<Discount, int, Discount>
+    internal class ShipperRepo : Repo, IRepo<Shipper, string, Shipper>
     {
-        public Discount Create(Discount obj)
+        public Shipper Create(Shipper obj)
         {
-            db.Discounts.Add(obj);
+            db.Shippers.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
         }
 
-        public bool Delete(int id)
+        public bool Delete(string id)
         {
             var ex = Read(id);
-            db.Discounts.Remove(ex);
+            db.Shippers.Remove(ex);
             return db.SaveChanges() > 0;
         }
 
-        public List<Discount> Read()
+        public List<Shipper> Read()
         {
-            return db.Discounts.ToList();
+            return db.Shippers.ToList();
         }
 
-        public Discount Read(int id)
+        public Shipper Read(string id)
         {
-            return db.Discounts.Find(id);
+            return db.Shippers.Find(id);
         }
 
-        public Discount Update(Discount obj)
+        public Shipper Update(Shipper obj)
         {
-            var ex = Read(obj.Id);
+            var ex = Read(obj.Username);
             db.Entry(ex).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;

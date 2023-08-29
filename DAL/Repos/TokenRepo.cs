@@ -1,5 +1,5 @@
-﻿using DAL.EF.Models;
-using DAL.Interfaces;
+﻿using DAL.Interfaces;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,45 +8,36 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class TokenRepo : Repo, IRepo<Token, int, bool>, IRepo2<Token,String,Token>
+    internal class TokenRepo : Repo, IRepo<Token, string, Token>
     {
-        public bool Create(Token obj)
+        public Token Create(Token obj)
+        {
+            db.Tokens.Add(obj);
+            if (db.SaveChanges() > 0) return obj;
+            return null;
+        }
+
+        public bool Delete(string id)
         {
             throw new NotImplementedException();
         }
 
-        public bool Delete(int id)
+        public List<Token> Read()
         {
             throw new NotImplementedException();
         }
 
-        public List<Token> Get()
+        public Token Read(string id)
         {
-
-            return db.Tokens.ToList();
+            return db.Tokens.FirstOrDefault(t => t.TKey.Equals(id));
         }
 
-        public Token Get(int id)
+        public Token Update(Token obj)
         {
-            throw new NotImplementedException();
+            var token = Read(obj.TKey);
+            db.Entry(token).CurrentValues.SetValues(obj);
+            if (db.SaveChanges() > 0) return token;
+            return null;
         }
-
-
-        public List<Token> GetDate(DateTime date)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Token GetToken(string id)
-        {
-            return db.Tokens.FirstOrDefault(v => v.TokenKey.Equals(id));
-        }
-
-        public bool Update(Token obj)
-        {
-            throw new NotImplementedException();
-        }
-
-      
     }
 }

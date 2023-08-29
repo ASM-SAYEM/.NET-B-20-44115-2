@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class TokenDTO
+    public class CartDTO
     {
-        public string TKey { get; set; }
+        public int Id { get; set; }
+       
+        public string CartBy { get; set; }
+       
         public DateTime CreatedAt { get; set; }
-        public DateTime? DeletedAt { get; set; }
-        public string UserId { get; set; }
+        public DateTime DeletedAt { get; set; }
     }
 }
